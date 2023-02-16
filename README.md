@@ -37,7 +37,14 @@ print(lista_ordenada)  # [1, 2, 3, 4, 5]
 
 # Como funciona
 
-A lógica por trás da é ir quebrando a lista sempre pegando o maior e menor numero e 
+A lógica por trás da é ir quebrando a lista sempre pegando o maior e menor numero e retirando da lista como mostra a imagem abaixo.
+
+<img src="./.github/algoritmo-step-1.png" alt="Python" />
+
+Após chegar na menor parte possível é hora de juntar todas as listas novamente, só que agora vamos jogando o maior para o final e menor para o inicio, assim ordenando a lista de forma crescente corretamente.
+
+<img src="./.github/algoritmo-step-2.png" alt="Python" />
+
 
 # Teste de desempenho
 
