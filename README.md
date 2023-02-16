@@ -39,20 +39,46 @@ print(lista_ordenada)  # [1, 2, 3, 4, 5]
 
 A lógica por trás da é ir quebrando a lista sempre pegando o maior e menor numero e retirando da lista como mostra a imagem abaixo.
 
-<img width="500" src="./.github/algoritmo-step-1.png" alt="Python" />
+<img width="650" src="./.github/algoritmo-step-1.png" alt="Python" />
 
 Após chegar na menor parte possível é hora de juntar todas as listas novamente, só que agora vamos jogando o maior para o final e menor para o inicio, assim ordenando a lista de forma crescente corretamente.
 
-<img width="500" src="./.github/algoritmo-step-2.png" alt="Python" />
+<img width="650" src="./.github/algoritmo-step-2.png" alt="Python" />
 
 
 # Teste de desempenho
 
-Para testar o desempenho do algoritmo em diferentes tamanhos de entrada, basta chamar a função test_time, passando como argumento o tamanho da lista a ser ordenada. A função irá imprimir o tempo de execução da função sorte e da função nativa do Python sorted.
+Para testar o desempenho do algoritmo em diferentes tamanhos de entrada, basta chamar a função ``test_time``, passando como argumento o tamanho da lista a ser ordenada. A função irá imprimir o tempo de execução da função ``sorte`` e da função nativa do Python ``sorted``.
 
 ## Exemplo:
 
 ```python
 test_time(1) # Teste de performance para uma lista com 5 itens
 test_time(100) # Teste de performance para uma lista com 500 itens
+```
+
+## Requisitos 📌
+    - Python 3.x 🐍
+
+## Começando 🚀
+Clone o repositório:
+
+```bash
+git clone https://github.com/Kaduh15/sorting-algorithm-python.git
+```
+### Entre na pasta do repositório:
+
+```bash
+cd sorting-algorithm-python
+```
+
+### Crie o ambiente virtual para o projeto:
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+```
+
+### Execute o Comando
+
+```bash
+python3 -m main
 ```
