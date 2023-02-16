@@ -2,13 +2,21 @@ from timeit import timeit
 
 
 def sorte(list: list[int]) -> list[int]:
+    """
+    It sorts a list of integers by recursively finding the
+    minimum and maximum values of the list,
+    appending them to a new list, and then removing them from the original list
+
+    :param list: list[int] -> The list of integers to be sorted
+    :type list: list[int]
+    :return: A list with the smallest and largest values of the list.
+    """
     if len(list) == 0:
         return
 
     result = []
 
-    min = menor_maior(list)[0]
-    max = menor_maior(list)[1]
+    min, max = menor_maior(list)
     result.append(min)
     result.append(max)
     list.remove(min)
