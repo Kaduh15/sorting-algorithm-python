@@ -1,4 +1,5 @@
 from collections import deque
+from sorte_v1 import sorte as sorteV1
 import random
 from timeit import timeit
 
@@ -66,6 +67,14 @@ def test_time(x: int = 1):
             f"Foi ordenado uma list de {total_items} itens\n"
             f"Em \033[32m{timeit(lambda: sorte(numbers_1))}\033[0m segundos\n"
             f"\033[33m* usando a minha função -> sorte()\033[0m\n"
+        )
+    )
+
+    print(
+        (
+            f"Foi ordenado uma list de {total_items} itens\n"
+            f"Em \033[32m{timeit(lambda:sorteV1(numbers_1))}\033[0m segundos\n"
+            f"\033[33m* usando a minha função -> sorte_v1()\033[0m\n"
         )
     )
 
