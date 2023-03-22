@@ -79,8 +79,8 @@ cd sorting-algorithm-python
 python3 -m venv .venv && source .venv/bin/activate
 ```
 
-### Execute o Comando
+### Execute o Comando de teste de desempenho
 
 ```bash
-python3 -m main
+python3 -m performance_test
 ```
