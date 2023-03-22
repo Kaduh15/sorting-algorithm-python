@@ -1,5 +1,8 @@
+from collections import deque
 import random
 from timeit import timeit
+
+# from stack import Stack
 
 
 def sorte(list: list[int]) -> list[int]:
@@ -14,8 +17,10 @@ def sorte(list: list[int]) -> list[int]:
     """
     if len(list) == 0:
         return
+    if len(list) == 1:
+        deque().append(list[0])
 
-    result = []
+    result = deque()
     min_value = min(list)
 
     result.append(min_value)
@@ -30,8 +35,8 @@ def sorte(list: list[int]) -> list[int]:
     if not sorted_list:
         return result
 
-    sorted_list.append(result[-1])
-    sorted_list.insert(0, result[0])
+    sorted_list.append(result.pop())
+    sorted_list.appendleft(result.pop())
 
     return sorted_list
 
@@ -45,30 +50,34 @@ def test_time(x: int = 1):
     :param x: int = 1, defaults to 1
     :type x: int (optional)
     """
-    print(('=' * 10) + f" \033[32m Testing time {x}X\033[0m  " + ('=' * 10))
+    print(("=" * 10) + f" \033[32m Testing time {x}X\033[0m  " + ("=" * 10))
     numbers = range(1, 10_001)
     total_numbers = len(numbers)
     len_max_numbers = total_numbers if x * 5 > total_numbers else x * 5
 
-    numbers = numbers = random.sample(range(10, 10_000), len_max_numbers)
+    numbers = random.sample(numbers, len_max_numbers)
     total_items = len(numbers)
 
     numbers_1 = numbers.copy()
     numbers_2 = numbers.copy()
 
-    print((
-        f'Foi ordenado uma list de {total_items} itens\n'
-        f'Em \033[32m{timeit(lambda: sorte(numbers_1))}\033[0m segundos\n'
-        f'\033[33m* usando a minha função -> sorte()\033[0m\n'
-    ))
+    print(
+        (
+            f"Foi ordenado uma list de {total_items} itens\n"
+            f"Em \033[32m{timeit(lambda: sorte(numbers_1))}\033[0m segundos\n"
+            f"\033[33m* usando a minha função -> sorte()\033[0m\n"
+        )
+    )
 
-    print((
-        f'Foi ordenado uma list de {total_items} itens\n'
-        f'Em \033[32m{timeit(lambda: sorted(numbers_2))}\033[0m segundos\n'
-        f'\033[33m* com a função nativa do Python -> sorted()\033[0m\n'
-    ))
+    print(
+        (
+            f"Foi ordenado uma list de {total_items} itens\n"
+            f"Em \033[32m{timeit(lambda: sorted(numbers_2))}\033[0m segundos\n"
+            f"\033[33m* com a função nativa do Python -> sorted()\033[0m\n"
+        )
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_time(1)
-    # test_time(100)
+    test_time(100)
