@@ -1,5 +1,7 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Python" />
+ <!-- Inserir imagem com a #vitrinedev ao final do link -->
+  
+![](https://raw.githubusercontent.com/Kaduh15/sorting-algorithm-python/master/.github/app.gif#vitrinedev)
 
   &#xa0;
 
